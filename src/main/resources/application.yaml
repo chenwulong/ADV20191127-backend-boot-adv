@@ -1,0 +1,65 @@
+### DATABASE ###
+#spring.datasource.url=jdbc:mysql://10.0.0.200:3306/test?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+spring:
+  datasource:
+    #url: jdbc:mysql://192.168.0.103:3306/test?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    #url: jdbc:mysql://10.0.0.200:3306/test?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    #url: jdbc:mysql://${DATABASE_IP}:3306/test?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    #username: root
+    #password: Root@mysql1
+
+    #url: jdbc:mysql://remotemysql.com:3306/sa3ySC3jDU?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    #username: sa3ySC3jDU
+    #password: gG4hiaT4Rj
+
+    url: jdbc:mysql://ns570.hostgator.com.br:3306/adv20197_teste?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: adv20197
+    password: ayxCA8s049
+
+    #testWhileIdle: true
+    #validationQuery: SELECT 1
+
+### JPA ###
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      #naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    open-in-view: false
+
+### MAIL ###
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: wulongcs@gmail.com
+    password: Kungfucs@google1
+    port: 587
+    protocol: smtp
+    test-connection: false
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+### SERVER ###
+server:
+  port: 3001
+#spring.banner.location=classpath:custombanner.txt
+
+### LOGGING ###
+#logging.level.root=WARN
+logging:
+  level:
+    root: INFO
+
+### ACTUATOR
+#port used to expose actuator
+#management:
+  #server:
+    #port: 8081
+    #address: 127.0.0.1

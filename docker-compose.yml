@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+
+  backend:
+    image: backend-mysql-adv:201911131710
+    ports:
+    - "3001:3001"
+    environment:
+      - DATABASE_IP=db.host
